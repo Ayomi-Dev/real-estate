@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 import './App.css';
+import Navigation from './home/Navigation';
+import './styles/navigation.css'
+import HouseProvider from './HouseContext';
+import './styles/header.css'
+import './styles/mission.css'
+import './styles/feature.css'
+import './styles/lists.css'
+import './styles/details.css'
+import PropertyLists from './pages/HouseLists';
+import PropertyDetails from './pages/PropertyDetails';
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <>
+        <Navigation />
+        <HouseProvider>
+          <Routes>
+            <Route path='/' element= {<Home />}></Route>
+
+            <Route path='/properties' element = { <PropertyLists /> } ></Route>
+
+            <Route path='/details' element = { <PropertyDetails /> } ></Route>
+          </Routes>
+        </HouseProvider>
+          
+      </>
+    </Router>
+    
   );
 }
 

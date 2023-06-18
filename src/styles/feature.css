@@ -1,0 +1,127 @@
+.feature{
+    width: 90%;
+    margin: 20px auto;
+}
+.feature h1{
+    color: rgba(0, 0, 0, .8);
+    font-size: 1.2rem;
+}
+.feature span{
+    color: blueviolet;
+}
+.feature-property{
+    max-width: 90%;
+    white-space: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-top: 20px;
+}
+.feature-property::-webkit-scrollbar{
+    display: none;
+}
+.property{
+    display: inline-block;
+    width: 300px;
+    height: 430px;
+    position: relative;
+    transition: box-shadow .2s;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+.property-img{
+    width: 96%;
+    margin: 0 auto;
+    height: 300px;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: transform .2s;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+}
+.property-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.property-details{
+    width: 95%;
+    height: 100px;
+    margin: 5px auto;
+}
+.name-price, .location-section{
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+.name-price{
+    font-size: .8rem;
+}
+.location-section{
+    font-size: .8rem;
+}
+.layer{
+    width: 100%;
+    color: #fff;
+    height: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    /* left: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height .2s;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.layer a{
+    color: #fff;
+}
+.layer .fa{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 1.2rem;
+}
+.interior{
+    display: flex;
+    justify-content: center;
+}
+.interior .fa{
+    margin: 0 5px;
+}
+.cta{
+    text-align: center;
+}
+.property-img:hover .layer{
+    height: 100%;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+}
+.property:hover{
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+}
+.property:hover .property-img{
+    transform: scale(1.03);
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+}
+.title .fa{
+    margin-left: 10px;
+}
+@media screen and (max-width: 600px) {
+    .feature-property{
+        margin: 20px auto 0 auto;
+    }
+    .feature h1{
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,105 @@
+.navigation{
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.nav-menu{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: violet;
+}
+.logo a{
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.menus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.menus li{
+    margin: 0 15px; 
+}
+.menus li.active{
+    background: blueviolet;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.menus li a{
+    color: blueviolet;
+}
+.menus li.active a{
+    color: #fff;
+}
+.counter{
+    position: relative;
+}
+.counter .fa{
+    font-size: 1.2rem;
+}
+.count-num{
+    background: blueviolet;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    color: #fff;
+    font-size: .5rem;
+}
+.notify{
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mobile-menu{
+    display: none;
+}
+@media screen and (max-width: 700px){
+    .nav-menu{
+        width: 95%;
+        justify-content: space-between;
+    }
+    .mobile-menu{
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        background: blueviolet;
+        color: #fff;
+    }
+    .menus{
+        position: absolute;
+        width: 100%;
+        height: 60vh;
+        background: black;
+        text-align: center;
+        top: 70px;
+        z-index: 999;
+        flex-direction: column;
+        justify-content: start;
+        display: none;
+        left: 0;
+    }
+    .menus li{
+        margin: 30px 0;
+    }
+    .menus li a{
+        color: blueviolet;
+    }
+    .menus.open{
+       display: block; 
+    }
+}

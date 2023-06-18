@@ -1,0 +1,92 @@
+.property-details{
+    width: 100%;
+    margin-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+.fa{
+    cursor: pointer;
+}
+.details-section{
+    width: 60%;
+    padding: 0 20px;
+}
+.details-section .property-img{
+    /* height: 400px; */
+    /* margin-top: 15px; */
+    border-radius: 5px;
+}
+.details-section .property-img img{
+    border-radius: 5px;
+}
+.name-price h1{
+    margin-left: 15px;
+}
+.more-images{
+    max-width: 80%;
+    white-space: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin: 15px auto;
+}
+.more-images::-webkit-scrollbar{
+    display: none;
+}
+.img{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin: 0 10px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.property-desc{
+    height: 100px;
+    width: 80%;
+    margin-top: 10px;
+}
+.agent-section{
+    width: 30%;
+}
+form{
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+form input{
+    border: ipx solid rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+form label{
+    text-align: left;
+    display: block;
+    margin-bottom: 10px;
+}
+.contact-img{
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.contact-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.contacts{
+    margin-top: 15px;
+}

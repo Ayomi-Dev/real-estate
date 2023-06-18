@@ -1,0 +1,65 @@
+
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+
+const Navigation = () => {
+
+    const [openMenu, setOpenMenu] = useState(false);
+    const location = useLocation()
+    
+    //adding active style to each menu corresponding to page name
+    const activeMenu = path => {
+        return location.pathname === path ? 'active' : '';
+    }
+
+
+    //toggle mobile menu on smaller screens
+    const handleToggleMenu = () => {
+        setOpenMenu(!openMenu)
+    }
+
+    return ( 
+        <div className="navigation">
+            <div className="nav-menu">
+
+                <div className="logo">
+                    <Link>LOGO</Link>
+                </div>
+
+                <ul className={`menus ${openMenu ? 'open' : ''}`}>
+
+                   <li className={activeMenu('/')}>
+                        <Link to='/'>Home</Link>
+                    </li> 
+
+                   <li className={activeMenu('/about')}>
+                        <Link to='/about'>About Us</Link>
+                    </li> 
+
+                   <li className={activeMenu('/properties')}>
+                        <Link to='/properties'>Lists</Link>
+                    </li>
+
+                   <li className={activeMenu('/contact')}> 
+                        <Link to='/contact'>Contact</Link>
+                    </li> 
+                </ul>
+                
+                <div className="notify">
+                    
+                    <div className="counter">
+                        <i className="fa fa-bookmark"></i>
+                        <div className="count-num">1</div>
+                    </div>
+
+                    <div className="mobile-menu">
+                        <i className="fa fa-bars" onClick={handleToggleMenu}></i>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+     );
+}
+ 
+export default Navigation;
