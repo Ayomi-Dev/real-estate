@@ -23,7 +23,7 @@ const TypeDropDown = () => {
                     </div>
                     <div className="name">
                         <p style={{color: 'blueviolet'}}>{ type }</p>
-                        <p>Please choose a type</p>
+                        <p>Choose a type</p>
                     </div>
                 </div>
 
@@ -39,7 +39,8 @@ const TypeDropDown = () => {
                     return (
                         <li className="type-name" onClick={() => {
                             setType(property);
-                            handleToggle();
+                            // handleToggle();
+                            
                         }} key={index}>
                             {property}
                         </li>

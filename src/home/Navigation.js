@@ -1,9 +1,13 @@
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { HouseContext } from '../HouseContext';
 
 const Navigation = () => {
 
+
+    const { savedProperty } = React.useContext(HouseContext)
+    
     const [openMenu, setOpenMenu] = useState(false);
     const location = useLocation()
     
@@ -47,14 +51,18 @@ const Navigation = () => {
                 
                 <div className="notify">
                     
-                    <div className="counter">
-                        <i className="fa fa-bookmark"></i>
-                        <div className="count-num">1</div>
-                    </div>
+                    <Link to={`/bookmarks`} >
+                        <div className="counter">
+                            <i className="fa fa-bookmark"></i>
+                            <div className="count-num">{savedProperty.length}</div>
+                        </div>
+                    </Link>
+                    
 
                     <div className="mobile-menu">
                         <i className="fa fa-bars" onClick={handleToggleMenu}></i>
                     </div>
+
                 </div>
                 
             </div>

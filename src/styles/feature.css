@@ -58,6 +58,7 @@
     justify-content: space-between;
 }
 .name-price{
+    align-items: center;
     font-size: .8rem;
 }
 .location-section{
@@ -70,7 +71,6 @@
     bottom: 0;
     position: absolute;
     background: rgba(0, 0, 0, .5);
-    /* left: 0; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,6 +122,23 @@
         margin: 20px auto 0 auto;
     }
     .feature h1{
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    .property{
+        width: 200px;
+        height: 370px;
+    }
+    .property-img{
+        height: 200px;
+    }
+    .feature .name-price, .feature .location-section{
+        flex-direction: column;
+        
+    }
+    .feature .location-section p{
+        text-align: center;
+    }
+    .feature .interior{
+        padding-top: 10px;
     }
 }

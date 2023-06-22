@@ -9,26 +9,28 @@
     width: 90%;
     height: 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    
+    margin: 20px auto;
+    background: #fff;
 }
 .drop-down{
-    width: 25%;
+    width: 27%;
     position: relative;
     margin: 0 auto;
     height: 70px;
-    z-index: 9999;
+    cursor: pointer;
 }
 .drop-down-btn{
     width: 100%;
     justify-content: space-between;
     align-items: center;
     display: flex;
-    height: 50px;
+    height: 100%;
+    font-size: .8rem;
     box-shadow: 0 3px 7px rgba(0,0,0,.3);
     border-radius: 5px;
+    background: #fff;
 }
 .drop-down-title{
     margin-left: 8px;
@@ -43,12 +45,14 @@
     width: 100%;
     position: absolute;
     height: 150px;
-    top: 50px;
+    top: 70px;
     border-radius: 5px;
     box-shadow: 0 3px 7px rgba(0,0,0,.3);
     list-style: none;
-    background: rgba(0, 0, 0, .7);
+    background: #fff;
     display: none;
+    overflow-y: auto;
+    z-index: 99;
 }
 .drop-down-menu.toggle{
     display: block; 
@@ -56,7 +60,6 @@
 .drop-down-menu li{
     margin: 15px;
     color: #141414;
-    color: #fff;
     cursor: pointer;
 }
 
@@ -65,7 +68,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 10px;
     width: 95%;
-    margin: 0 auto;;
+    margin: 60px auto;
 }
 .props{
     transition: box-shadow .2s;
@@ -86,4 +89,35 @@
     justify-content: center;
     align-items: center;
     height: 50px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px){
+    .filters{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .drop-down{
+        width: 50%;
+        margin-bottom: 5px;
+    }
+    .all-properties{
+        margin-top: 70px;
+    }
+    .search{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .filters{
+        /* flex-direction: column; */
+        height: 200px;
+    }
+    .all-properties{
+        margin-top: 100px ;
+    }
+    .drop-down{
+        width: 95%;
+        height: 70px;
+        margin: 5px;
+    }
 }

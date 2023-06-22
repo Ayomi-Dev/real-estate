@@ -1,6 +1,6 @@
 import Feature from "../home/Feature";
 import Header from "../home/Header";
-import Mission from "../home/Mission";
+import Service from "../home/Services";
 import Newest from "../home/Newest";
 
 const Home = () => {
@@ -9,9 +9,9 @@ const Home = () => {
         <>
             <Header />
 
-            <Feature />
+            <Service />
 
-            <Mission />
+            <Feature />
 
             <Newest />
         

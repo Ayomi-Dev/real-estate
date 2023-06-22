@@ -1,0 +1,61 @@
+.bookmark{
+    width: 100%;
+    margin-top: 80px;
+}
+.bookmark h1{
+    text-align: center;
+    margin: 10px 15px;
+}
+.container{
+    width: 60%;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+.container a{
+    color: black;
+}
+.saved-property{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.img-name{
+    width: 70%;
+    height: 100%;
+}
+.img-name img{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;;
+}
+.price-location{
+    width: 30%;
+}
+.price-location h2{
+    margin: 10px 0 0 10px;
+}
+.action{
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.action button{
+    background: #dc143c;
+}
+@media screen and (max-width: 650px){
+    .bookmarks h1{
+        font-size: 1rem;
+    }
+    .container{
+        width: 95%;
+    }
+    .container h2{
+        font-size: 1rem;
+    }
+    .saved-property{
+        height: 200px;
+    }
+}

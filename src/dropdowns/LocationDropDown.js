@@ -4,9 +4,7 @@ import { useContext, useState } from 'react';
 
 const LcationDropDown = () => {
 
-    const { locations, setLocations, propertyLocation } = useContext(HouseContext)
-
-    console.log(locations, setLocations, propertyLocation);
+    const { city, setCity, propertyLocation } = useContext(HouseContext)
 
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -22,8 +20,8 @@ const LcationDropDown = () => {
                         <i className="fa fa-location-dot"></i>
                     </div>
                     <div className="name">
-                        <p style={{color: 'blueviolet'}}>{ locations }</p>
-                        <p>Please choose a location</p>
+                        <p style={{color: 'blueviolet'}}>{ city }</p>
+                        <p>Choose a location</p>
                     </div>
                 </div>
 
@@ -38,8 +36,8 @@ const LcationDropDown = () => {
                 {propertyLocation.map((property, index) => {
                     return (
                         <li className="type-name" onClick={() => {
-                            setLocations(property);
-                            handleToggle();
+                            setCity(property);
+                            // handleToggle();
                         }} key={index}>
                             {property}
                         </li>

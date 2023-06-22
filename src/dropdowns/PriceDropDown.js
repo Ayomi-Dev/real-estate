@@ -8,16 +8,22 @@ const PriceDropDown = () => {
 
     const prices = [
         {
-            value: "100000-300000"
+            value: 'Price (Any)'
         },
         {
-            value: "300000-500000"
+            value: "0 - 200000"
         },
         {
-            value: "500000-700000"
+            value: "200000 - 400000"
         },
         {
-            value: "700000-1000000"
+            value: "400000 - 600000"
+        },
+        {
+            value: "600000 - 800000"
+        },
+        {
+            value: "800000 - 1000000"
         }
     ]
 
@@ -38,7 +44,7 @@ const PriceDropDown = () => {
                     </div>
                     <div className="name">
                         <p style={{color: 'blueviolet'}}>{ propertyPrice }</p>
-                        <p>Please choose a location</p>
+                        <p>Choose a price</p>
                     </div>
                 </div>
 
@@ -54,7 +60,7 @@ const PriceDropDown = () => {
                     return (
                         <li className="type-name" onClick={() => {
                             setPropertyPrice(price.value);
-                            handleToggle();
+                            // handleToggle();
                             }} key={index}>
                                 
                             {price.value}

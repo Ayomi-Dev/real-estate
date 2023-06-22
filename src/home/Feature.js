@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { HouseContext } from "../HouseContext";
 
+import { propertyInfo } from "../HouseInfo";
 
 const Feature = () => {
-    const { properties } = useContext(HouseContext);
-    const featuredProperties = properties.filter(property => property.category === 'feature')
+    
+    const featuredProperties = propertyInfo.filter(property => property.category === 'feature')
 
+     
     
     return ( 
         <div className="feature">
@@ -27,7 +27,7 @@ const Feature = () => {
 
                                 <div className="layer">
                                     <i className="fa fa-heart"></i>
-                                    <Link >
+                                    <Link to={`/details/${property.id}`} >
                                         See details
                                     </Link>
                                 </div>
@@ -38,11 +38,11 @@ const Feature = () => {
 
                                 <div className="name-price">
                                     <h3>{property.name}</h3>
-                                    <h3>{property.price}</h3>
+                                    <h3>${property.price}</h3>
                                 </div>
 
                                 <div className="location-section">
-                                    <p>{property.location}</p>
+                                    <p>{property.location}, {property.city}</p>
                                     <div className="interior">
 
                                         <i className="fa fa-bed"></i><span>{property.beds}</span>

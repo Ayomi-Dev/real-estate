@@ -3,11 +3,10 @@ import React from 'react';
 
 const Search = () => {
 
-    const {handleFilter, properties} = React.useContext(HouseContext)
-    console.log(handleFilter())
+    const {handleAllFilter, properties} = React.useContext(HouseContext)
 
     return ( 
-        <div className="search" onClick={handleFilter}>
+        <div className="search" onClick={()=> handleAllFilter()}>
             <i className="fa fa-search"></i>
         </div>
     );

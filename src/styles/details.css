@@ -1,9 +1,9 @@
-.property-details{
+.prop-details{
     width: 100%;
     margin-top: 80px;
-    min-height: 100vh;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 .fa{
     cursor: pointer;
@@ -13,8 +13,8 @@
     padding: 0 20px;
 }
 .details-section .property-img{
-    /* height: 400px; */
-    /* margin-top: 15px; */
+    height: 400px;
+    margin-top: 15px;
     border-radius: 5px;
 }
 .details-section .property-img img{
@@ -22,7 +22,9 @@
 }
 .name-price h1{
     margin-left: 15px;
+    color: blueviolet;
 }
+
 .more-images{
     max-width: 80%;
     white-space: nowrap;
@@ -40,30 +42,53 @@
     border-radius: 5px;
     margin: 0 10px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+    transition: transform .5s;
+}
+.img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .5);
 }
 .img img{
     width: 100%;
     height: 100%;
     border-radius: 5px;
+    object-fit: cover;
+}
+.more{
+    display: flex;
+    margin: 5px;
+}
+.more .fa{
+    margin-right: 10px;
+    color: blueviolet;
+}
+.more p{
+    margin-left:  5px;;
+}
+.location-interior{
+    font-weight: bolder;
+    margin-top: 20px;
 }
 .property-desc{
     height: 100px;
     width: 80%;
     margin-top: 10px;
 }
+.property-desc h2{
+    color: blueviolet;
+}
 .agent-section{
     width: 30%;
 }
 form{
     width: 100%;
-    height: 250px;
     margin-top: 20px;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
     padding: 10px 15px;
     border-radius: 5px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
 }
 form input{
-    border: ipx solid rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .3);
     width: 100%;
     height: 40px;
     display: block;
@@ -77,6 +102,15 @@ form label{
     display: block;
     margin-bottom: 10px;
 }
+form textarea{
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+}
 .contact-img{
     text-align: center;
     width: 100%;
@@ -86,7 +120,42 @@ form label{
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
 }
 .contacts{
-    margin-top: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+.contacts .fa, .fa-brands{
+    margin-right: 15px;
+    
+}
+form input:focus, form textarea:focus{
+    border: 1px solid blueviolet;
+}
+
+@media screen and (max-width: 700px) {
+    .prop-details{
+        flex-direction: column;
+    }
+    .details-section, .agent-section{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .property-desc{
+        height: unset;
+        width: 95%;
+    }
+    .property-desc h2{
+        font-size: 1rem;
+    }
+    .property-desc p, .more p{
+        font-size: .8rem; 
+    }
+    .name-price h1{
+        font-size: 1.5rem;
+    }
+    .name-price p{
+        font-size: .8rem; 
+    }
 }
