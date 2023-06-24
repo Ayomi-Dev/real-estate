@@ -37,6 +37,7 @@ const HouseProvider = ({ children }) => {
     }, [])
     
     
+    const [count, setCount] = useState(null)
 
     // creating filter/search property function 
     const handleAllFilter = () => {
@@ -61,11 +62,13 @@ const HouseProvider = ({ children }) => {
                 allPrice >= minPrice &&
                 allPrice <= maxPrice
             ){
+                
                 return property;
             }
 
             // if all filter includes any option
             if(isAny(city) && isAny(type) && isAny(propertyPrice)){
+                
                 return property
             }
 
@@ -110,12 +113,20 @@ const HouseProvider = ({ children }) => {
             }
             
         })
+
+        
         setTimeout(() => {
             return filterAllProperties.length < 1 ? setProperties([])
              : setProperties(filterAllProperties);
         }, 5000)
 
         setTimeout(() => {
+            if(filterAllProperties.length > 0){
+                setCount(true)
+            }
+            if(filterAllProperties.length === 24){
+                setCount(false)
+            }
             setIsLoading(null)
         }, 5000)
     }
@@ -173,6 +184,7 @@ const HouseProvider = ({ children }) => {
             savedProperty, 
             handleDelete,
             isLoading,
+            count
             // handleSingleFilter
         }}>
             { children }

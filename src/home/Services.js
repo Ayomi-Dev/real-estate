@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/bundle'
 
 import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from 'swiper';
+import { Link } from 'react-router-dom'
 
 SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
 
@@ -52,6 +53,12 @@ const Service = () => {
                         <img src={ House } alt="" />
                     </SwiperSlide>
                 </Swiper>
+
+                <div className="read-more">
+                    <Link to={'/about'}>
+                        <button>Read More</button>
+                    </Link>
+                </div>
             </div>
 
             
@@ -87,7 +94,7 @@ const Service = () => {
                     <i className="fa fa-chart-column"></i>
                     <div className="texts">
                         <h2>Land Advisory</h2>
-                        <p>Giving Your vLand Journey,<br /> 
+                        <p>Giving Your Land Journey,<br /> 
                         Empowering Your Decision.</p>
                     </div>
                 </div>

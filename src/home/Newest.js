@@ -25,8 +25,8 @@ const Newest = () => {
 
                                 <div className="layer">
                                     <i className="fa fa-heart"></i>
-                                    <Link >
-                                        See details
+                                    <Link to={`/details/${property.id}`} >
+                                        Click to view details
                                     </Link>
                                 </div>
 
@@ -37,7 +37,7 @@ const Newest = () => {
                                     <h3>${property.price}</h3>
                                 </div>
                                 <div className="location-section">
-                                    <p>{property.location}, {property.city}</p>
+                                    <p><i className="fa fa-location-dot"></i> {property.location}, {property.city}</p>
                                     <div className="interior">
                                         <i className="fa fa-bed"></i><span>{property.beds}</span>
                                         <i className="fa fa-bath"></i><span>{property.baths}</span>

@@ -83,7 +83,7 @@
 form{
     width: 100%;
     margin-top: 20px;
-    padding: 10px 15px;
+    padding: 20px 15px;
     border-radius: 5px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
 }
@@ -111,6 +111,7 @@ form textarea{
     display: block;
     width: 100%;
 }
+
 .contact-img{
     text-align: center;
     width: 100%;
@@ -139,12 +140,13 @@ form input:focus, form textarea:focus{
         flex-direction: column;
     }
     .details-section, .agent-section{
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
     }
     .property-desc{
         height: unset;
         width: 95%;
+        margin: 10px 0;
     }
     .property-desc h2{
         font-size: 1rem;
@@ -153,9 +155,15 @@ form input:focus, form textarea:focus{
         font-size: .8rem; 
     }
     .name-price h1{
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
     .name-price p{
         font-size: .8rem; 
+    }
+    form{
+        text-align: center;
+        width: 97%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

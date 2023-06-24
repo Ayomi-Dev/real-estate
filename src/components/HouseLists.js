@@ -11,12 +11,13 @@ import { Oval } from "react-loader-spinner";
 
 
 const PropertyLists = () => {
-    const { properties, isLoading } = useContext(HouseContext)
+    const { properties, isLoading, count } = useContext(HouseContext)
     
 
     return ( 
         <div className="properties">
             <div className="filters">
+
                 <TypeDropDown />
 
                 <PriceDropDown />
@@ -25,8 +26,11 @@ const PropertyLists = () => {
 
                <Search />
 
+            
             </div>
 
+            {count && <p style={{textAlign: "center", opaity: ".7"}}>({properties.length}) result(s) found</p>}
+            
             {isLoading ? 
                 <Oval
                     height={80}

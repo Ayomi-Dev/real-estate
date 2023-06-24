@@ -53,7 +53,7 @@ const Navigation = () => {
                     
                     <Link to={`/bookmarks`} >
                         <div className="counter">
-                            <i className="fa fa-bookmark"></i>
+                            <i className="fa fa-bookmark" style={{color: "#141414"}}></i>
                             <div className="count-num">{savedProperty.length}</div>
                         </div>
                     </Link>

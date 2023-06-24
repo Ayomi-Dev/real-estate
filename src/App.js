@@ -10,9 +10,13 @@ import './styles/feature.css'
 import './styles/lists.css'
 import './styles/details.css'
 import './styles/bookmark.css'
+import './styles/about.css'
+import './styles/contact.css'
 import PropertyLists from './components/HouseLists';
 import PropertyDetails from './components/PropertyDetails';
 import Bookmark from './components/Bookmark';
+import About from './components/About';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -33,6 +37,10 @@ function App() {
 
             <Route path='/bookmarks' element = { <Bookmark />} ></Route>
             
+
+            <Route path='/about' element = { <About />} ></Route>
+
+            <Route path='/contact' element = { <Contact />}></Route>
           </Routes>
           
         </HouseProvider>

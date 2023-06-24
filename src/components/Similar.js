@@ -29,7 +29,7 @@ const Similar = () => {
                                 <div className="layer">
                                     <i className="fa fa-heart"></i>
                                     <Link to={`/details/${property.id}`} >
-                                        See details
+                                        Click to view details
                                     </Link>
                                 </div>
 
@@ -43,7 +43,7 @@ const Similar = () => {
                                 </div>
 
                                 <div className="location-section">
-                                    <p>{property.location}, {property.city}</p>
+                                    <p><i className="fa fa-location-dot"></i> {property.location}, {property.city}</p>
                                     <div className="interior">
 
                                         <i className="fa fa-bed"></i><span>{property.beds}</span>
