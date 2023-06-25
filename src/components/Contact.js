@@ -1,4 +1,5 @@
 import Image from '../assets/house/4.jpeg'
+import Footer from '../home/Footer';
 
 const Contact = () => {
     return ( 
@@ -25,7 +26,7 @@ const Contact = () => {
                     </div>
 
                     <div className="phone-card">
-                        <i className="fa fa-phone"></i>
+                        <i className="fa-brands fa-rocketchat"></i>
                         <div className="info">
                             <p> Chat directly with <br /> our sales team.</p>
                             <button>Chat Now</button>
@@ -49,6 +50,15 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
+
+            <div className="links" style={{color: "blueviolet"}}>
+                <i className="fa-brands fa-facebook"></i>
+                <i className="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-linkedin"></i>
+            </div>
+
+            <Footer />
         </div>
      );
 }
