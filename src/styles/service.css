@@ -32,19 +32,10 @@
     color: #fff;
     left: 10px;
 }
-.service-img{
-    position: absolute;
-    transform: translateX(30%);
-    height: 70%;
-    width: 70%;
-    top: 15%;
-    box-shadow: 0 4px 10px rgba(0,0,0,.3);
-}
 .service-img img{
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    
 }
 .service-card{
     height: 80px;

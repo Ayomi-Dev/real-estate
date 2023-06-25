@@ -29,7 +29,10 @@ const PropertyLists = () => {
             
             </div>
 
-            {count && <p style={{textAlign: "center", opaity: ".7"}}>({properties.length}) result(s) found</p>}
+            {count && <p className="result" style={{textAlign: "center", opaity: ".7"}}>
+                ({properties.length}) result(s) found
+                </p>
+            }
             
             {isLoading ? 
                 <Oval

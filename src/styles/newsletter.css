@@ -1,0 +1,57 @@
+.newsletter{
+    width: 80%;
+    margin: 20px auto;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+}
+.newsletter img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+}
+.newsletter .overlay{
+    height: 100%;
+}
+.news-email{
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    background: rgba(0,0,0,.3);
+    backdrop-filter: blur(5px);
+    margin-top: 20px;
+}
+.news-email #email{
+    width: 90%;
+    background: none;
+    border: none;
+    outline: none;
+    height: 50px;
+    padding: 10px;
+    color: #FFF;
+    margin: 0;
+}
+.news-email button{
+    border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+    .newsletter{
+        width: 95%;
+        text-align: center;
+    }
+    .news-email{
+        width: 90%;
+    }
+    .newsletter .overlay h1{
+        font-size: 1.2rem;
+    }
+    .newsletter .overlay h2{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+}

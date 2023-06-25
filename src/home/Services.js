@@ -27,7 +27,15 @@ const Service = () => {
                     <p className="caption">100% guaranteed comfort.</p>
                 </div>
 
-                <Swiper  className="service-img"
+                <Swiper  style={{
+                    width: "70%",
+                    position: "absolute",
+                    top:"15%",
+                    height: "70%",
+                    transform: "translateX(30%)",
+                    boxShadow:" 0 4px 10px rgba(0,0,0,.3)",
+                    borderRadius: "5px"
+                    }}
                     pagination={{clickable: true}}
                     loop
                     autoplay={{delay: 5000}}

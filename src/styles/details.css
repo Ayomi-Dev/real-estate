@@ -13,7 +13,7 @@
     padding: 0 20px;
 }
 .details-section .property-img{
-    height: 400px;
+    height: 350px;
     margin-top: 15px;
     border-radius: 5px;
 }
@@ -24,7 +24,9 @@
     margin-left: 15px;
     color: blueviolet;
 }
-
+.name-price h2{
+    color: blueviolet;
+}
 .more-images{
     max-width: 80%;
     white-space: nowrap;
@@ -155,9 +157,9 @@ form input:focus, form textarea:focus{
         font-size: .8rem; 
     }
     .name-price h1{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
-    .name-price p{
+    .name-price h2{
         font-size: .8rem; 
     }
     form{
@@ -165,5 +167,8 @@ form input:focus, form textarea:focus{
         width: 97%;
         margin-left: auto;
         margin-right: auto;
+    }
+    .details-section .property-img{
+        height: 300px;
     }
 }

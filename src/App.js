@@ -1,17 +1,26 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
+
+
+// Importing all css files
 import './App.css';
-import Navigation from './home/Navigation';
 import './styles/navigation.css'
-import HouseProvider from './HouseContext';
 import './styles/header.css'
+import './styles/footer.css'
 import './styles/service.css'
 import './styles/feature.css'
+import './styles/review.css'
 import './styles/lists.css'
 import './styles/details.css'
 import './styles/bookmark.css'
 import './styles/about.css'
 import './styles/contact.css'
+import './styles/newsletter.css'
+
+
+// importing all components
+import Home from './components/Home';
+import Navigation from './home/Navigation';
+import HouseProvider from './HouseContext';
 import PropertyLists from './components/HouseLists';
 import PropertyDetails from './components/PropertyDetails';
 import Bookmark from './components/Bookmark';
