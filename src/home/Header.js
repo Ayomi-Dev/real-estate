@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/bundle'
 
 import SwiperCore, { Autoplay, EffectFade, Navigation, Pagination } from 'swiper';
+import { Link } from 'react-router-dom';
 
 
 SwiperCore.use([Navigation, Pagination, Autoplay, EffectFade]);
@@ -50,7 +51,11 @@ const Header = () => {
                 <div className="header-text">
                     <h1>Unlock Your Dream Home</h1>
                     <h3>Discover the Perfect Property for Your Lifestyle!</h3>
-                    <button>Explore <i className="fa fa-arrow-right-long"></i></button>
+                    
+                    <Link to={'/properties'}>
+                        <button>Explore <i className="fa fa-arrow-right-long"></i></button>
+                    </Link>
+                    
                 </div>
                 <div className="numbers">
                     <div className="number">

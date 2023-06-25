@@ -40,7 +40,9 @@ const AllProperties = ({ properties }) => {
                                     </div>
                                 </div>
                                 <div className="cta">
-                                    <button>Book Now</button>
+                                    <Link to={`/details/${property.id}`}>
+                                        <button>Book Now</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

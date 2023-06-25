@@ -115,7 +115,8 @@ button .fa{
         font-size: .8rem;
     }
     .number p{
-        font-size: .8rem;
+        font-size: .7rem;
+        margin-left: 4px;
     }
 } 
 @media screen and (max-width: 370px) {
@@ -134,11 +135,12 @@ button .fa{
         height: 20px;
         font-size: .5rem;
     }
-    .number p{
-        margin: 0;
+    /* .number p{
+        margin-left: 0;
+        font-size: .7rem;
     }
     .number span{
         font: .7rem;
-    }
+    } */
 
 }

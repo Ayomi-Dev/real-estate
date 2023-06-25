@@ -1,22 +1,45 @@
 import { Link } from "react-router-dom";
 
 import { propertyInfo } from "../HouseInfo";
+import { useRef } from "react";
 
 const Feature = () => {
     
     const featuredProperties = propertyInfo.filter(property => property.category === 'feature')
 
-     
+    const featureRef  = useRef()
+
+    const handleScrollLeft = () => {
+        featureRef.current.scrollBy({
+            left: -150, 
+            behavior: 'smooth',
+        })
+    } 
+    const handleScrollRight = () => {
+        featureRef.current.scrollBy({
+            left: 150, 
+            behavior: 'smooth',
+        })
+    } 
     
     return ( 
         <div className="feature">
             <div className="title">
                 <h1><span>Featured</span> Properties</h1>
-                <h1><span>See all</span> <i className="fa fa-arrow-right-long"></i></h1>
+                <h1>
+                    <i className="fa fa-arrow-left-long" onClick={ handleScrollLeft }></i>
+
+                    <Link to={'/properties'}>
+                        <span>See all</span> 
+                    </Link>
+
+                    <i className="fa fa-arrow-right-long" onClick={ handleScrollRight }></i>
+
+                </h1>
             </div>
             
 
-            <div className="feature-property">
+            <div className="feature-property" ref={ featureRef }>
                 
                 {featuredProperties.map((property, index) => {
                     return (
@@ -55,7 +78,9 @@ const Feature = () => {
 
 
                                 <div className="cta">
-                                    <button>Book Now</button>
+                                    <Link to={`/details/${property.id}`}>
+                                        <button>Book Now</button>
+                                    </Link>
                                 </div>
                                 
                             </div>

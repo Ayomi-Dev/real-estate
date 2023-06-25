@@ -60,7 +60,7 @@ const Navigation = () => {
                     
 
                     <div className="mobile-menu">
-                        <i className="fa fa-bars" onClick={handleToggleMenu}></i>
+                        <i className={`fa fa-bars ${openMenu ? "fa fa-times" : ''}`} onClick={handleToggleMenu}></i>
                     </div>
 
                 </div>

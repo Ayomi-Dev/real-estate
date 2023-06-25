@@ -16,6 +16,8 @@ const PropertyLists = () => {
 
     return ( 
         <div className="properties">
+            <h1>Explore the most <span style={{color: "blueviolet"}}>Suitable</span> property for you.</h1>
+
             <div className="filters">
 
                 <TypeDropDown />

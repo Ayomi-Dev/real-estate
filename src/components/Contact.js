@@ -6,9 +6,9 @@ const Contact = () => {
         <div className="contact-container">
             <div className="contact-header">
                 <img src={Image} alt="" />
-                <div className="overlay" style={{textAlign: "center"}}>
-                    <h1>Contact Us About Our Properties.</h1>
-                    <p>We would love to show you how you can become a property owner
+                <div className="overlay" style={{textAlign: "center", zIndex: "1"}}>
+                    <h1 style={{margin: "15px"}}>Contact Us About Our Properties.</h1>
+                    <p style={{margin: "15px"}}>We would love to show you how you can become a property owner
                         in ne of the finest locations around the country. <br />
                         Here are a few ways to reach out to our sales team.
                     </p>
@@ -32,6 +32,14 @@ const Contact = () => {
                             <button>Chat Now</button>
                         </div>
                     </div>
+
+                    <div className="socials" style={{color: "blueviolet",
+                     marginTop:"20px", textAlign: "center", width: "100%"}}>
+                        <i className="fa-brands fa-facebook"></i>
+                        <i className="fa-brands fa-twitter"></i>
+                        <i className="fa-brands fa-instagram"></i>
+                        <i className="fa-brands fa-linkedin"></i>
+                    </div>
                     
                 </div>
                 <div className="phone">
@@ -48,17 +56,11 @@ const Contact = () => {
 
                         <button type="submit">Send</button>
                     </form>
+                    
                 </div>
             </div>
 
-            <div className="links" style={{color: "blueviolet"}}>
-                <i className="fa-brands fa-facebook"></i>
-                <i className="fa-brands fa-twitter"></i>
-                <i className="fa-brands fa-instagram"></i>
-                <i className="fa-brands fa-linkedin"></i>
-            </div>
-
-            <Footer />
+            
         </div>
      );
 }

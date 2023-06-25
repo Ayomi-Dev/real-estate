@@ -1,21 +1,45 @@
 import { Link } from "react-router-dom";
 import { propertyInfo } from "../HouseInfo";
+import { useRef } from "react";
 
 
 const Newest = () => {
 
     const newestProperties = propertyInfo.filter(property => property.category === 'new')
 
+    const featureRef  = useRef();
+
+    const handleScrollLeft = () => {
+        featureRef.current.scrollBy({
+            left: -150, 
+            behavior: 'smooth',
+        })
+    } 
+    const handleScrollRight = () => {
+        featureRef.current.scrollBy({
+            left: 150, 
+            behavior: 'smooth',
+        })
+    } 
     
     return ( 
         <div className="feature">
             <div className="title">
                 <h1><span>Newest</span> Deals</h1>
-                <h1><span>See all</span> <i className="fa fa-arrow-right-long"></i></h1>
+                <h1>
+                    <i className="fa fa-arrow-left-long" onClick={ handleScrollLeft }></i>
+
+                    <Link to={'/properties'}>
+                        <span>See all</span> 
+                    </Link>
+
+                    <i className="fa fa-arrow-right-long" onClick={ handleScrollRight }></i>
+
+                </h1>
             </div>
             
 
-            <div className="feature-property">
+            <div className="feature-property" ref={ featureRef }>
                 
                 {newestProperties.map((property, index) => {
                     return (
@@ -45,7 +69,9 @@ const Newest = () => {
                                     </div>
                                 </div>
                                 <div className="cta">
-                                    <button>Book Now</button>
+                                    <Link to={`/details/${property.id}`}>
+                                        <button>Book Now</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

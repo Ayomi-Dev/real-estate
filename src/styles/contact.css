@@ -16,15 +16,13 @@
 }
 .contact-option{
     width: 70%;
-    position: absolute;
-    top: 80%;
     display: flex;
     background: #fff;
     margin: 0 auto;
-    z-index: 99;
     border-radius: 5px;
     left: 14%;
 }
+
 .phone{
     width: 50%;
     padding: 10px 20px;
@@ -44,7 +42,7 @@
 .phone-card p{
     margin: 10px 0;
 }
-.phone-card .fa{
+.phone-card i{
     font-size: 1.3rem;
     padding: 15px;
     border-radius: 50%;

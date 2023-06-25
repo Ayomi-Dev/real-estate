@@ -95,11 +95,11 @@ const PropertyDetails = () => {
                 <div className="location-interior">
                     
                     <div className="more">
-                        <i className="fa fa-bed"></i>
+                        <i className="fa fa-i-cursor"></i>
                         <p>Type: {selectedProperty.type}</p>
                     </div>
                     <div className="more">
-                        <i className="fa fa-bed"></i>
+                        <i className="fa fa-maximize"></i>
                         <p>Size: {selectedProperty.size}</p>
                     </div>
                     <div className="more">
@@ -108,18 +108,18 @@ const PropertyDetails = () => {
                     </div>
                     <div className="more">
                         <i className="fa fa-kitchen-set"></i>
-                        <p>Kitchen: {selectedProperty.kichen}</p>
+                        <p>Kitchen: {selectedProperty.kitchen}</p>
                     </div>
                     <div className="more">
                         <i className="fa fa-bath"></i>
                         <p>Bathrooms: {selectedProperty.baths}</p>
                     </div>
                     <div className="more">
-                        <i className="fa fa-bed"></i>
+                        <i className="fa fa-house-chimney-user"></i>
                         <p>Rooms: {selectedProperty.rooms}</p>
                     </div>
                     <div className="more">
-                        <i className="fa fa-bed"></i>
+                        <i className="fa fa-calendar"></i>
                         <p>Year: {selectedProperty.year}</p>
                     </div>
                     <div className="more">

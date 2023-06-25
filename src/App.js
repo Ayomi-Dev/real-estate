@@ -26,6 +26,7 @@ import PropertyDetails from './components/PropertyDetails';
 import Bookmark from './components/Bookmark';
 import About from './components/About';
 import Contact from './components/Contact';
+import Footer from './home/Footer';
 
 
 function App() {
@@ -35,7 +36,9 @@ function App() {
       <>
         
         <HouseProvider>
+
           <Navigation />
+          
           <Routes>
             
             <Route path='/' element= {<Home />}></Route>
@@ -46,12 +49,14 @@ function App() {
 
             <Route path='/bookmarks' element = { <Bookmark />} ></Route>
             
-
             <Route path='/about' element = { <About />} ></Route>
 
             <Route path='/contact' element = { <Contact />}></Route>
+
           </Routes>
-          
+
+          <Footer />
+
         </HouseProvider>
           
       </>

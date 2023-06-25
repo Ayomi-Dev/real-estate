@@ -5,6 +5,10 @@
     min-height: 100vh;
     position: relative;
 }
+.properties h1{
+    font-size: 1.2rem;
+    text-align: center;
+}
 .filters{
     width: 90%;
     height: 80px;
@@ -63,11 +67,9 @@
 }
 .drop-down-menu li{
     margin: 15px;
-    color: #141414;
+    color: blueviolet;
     cursor: pointer;
-    border-bottom: 1px solid #141414;
 }
-
 .all-properties{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -101,6 +103,9 @@
         flex-wrap: wrap;
         margin-bottom: 10px;
     }
+    .properties h1{
+        font-size: 1rem;
+    }
     .drop-down{
         width: 50%;
         margin-bottom: 5px;
@@ -114,7 +119,6 @@
 }
 @media screen and (max-width: 500px) {
     .filters{
-        /* flex-direction: column; */
         height: 200px;
     }
     .all-properties{
