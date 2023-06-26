@@ -9,7 +9,7 @@ const Contact = () => {
                 <div className="overlay" style={{textAlign: "center", zIndex: "1"}}>
                     <h1 style={{margin: "15px"}}>Contact Us About Our Properties.</h1>
                     <p style={{margin: "15px"}}>We would love to show you how you can become a property owner
-                        in ne of the finest locations around the country. <br />
+                        in one of the finest locations around the country. <br />
                         Here are a few ways to reach out to our sales team.
                     </p>
                 </div>

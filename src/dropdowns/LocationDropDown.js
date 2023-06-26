@@ -37,7 +37,7 @@ const LcationDropDown = () => {
                     return (
                         <li className="type-name" onClick={() => {
                             setCity(property);
-                            // handleToggle();
+                            handleToggle();
                         }} key={index}>
                             {property}
                         </li>

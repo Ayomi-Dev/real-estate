@@ -39,7 +39,7 @@ const TypeDropDown = () => {
                     return (
                         <li className="type-name" onClick={() => {
                             setType(property);
-                            // handleToggle();
+                            handleToggle();
                             
                         }} key={index}>
                             {property}

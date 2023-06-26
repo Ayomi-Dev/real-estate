@@ -118,7 +118,7 @@ const HouseProvider = ({ children }) => {
         setTimeout(() => {
             return filterAllProperties.length < 1 ? setProperties([])
              : setProperties(filterAllProperties);
-        }, 5000)
+        }, 3000)
 
         setTimeout(() => {
             if(filterAllProperties.length > 0){
@@ -128,7 +128,7 @@ const HouseProvider = ({ children }) => {
                 setCount(false)
             }
             setIsLoading(null)
-        }, 5000)
+        }, 3000)
     }
 
     // handling properties saved by a user

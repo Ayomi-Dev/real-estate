@@ -60,7 +60,7 @@ const PriceDropDown = () => {
                     return (
                         <li className="type-name" onClick={() => {
                             setPropertyPrice(price.value);
-                            // handleToggle();
+                            handleToggle();
                             }} key={index}>
                                 
                             {price.value}
