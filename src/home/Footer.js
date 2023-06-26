@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="footer-logo">
                     <Link to='/'>
                         <i className="fa fa-landmark"></i>
-                        <p>Luxury Homes</p>
+                        <p>De Realtor</p>
                     </Link>
                 </div>
                 <div className="footer-links">
