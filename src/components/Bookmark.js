@@ -11,7 +11,7 @@ const Bookmark = () => {
        
     return ( 
         <div className="bookmark">
-            <h1>Here are your saved properties</h1>
+            <h1>Here are your <span styles={{color: "blueviolet"}}>saved</span> properties</h1>
             <div className="container">
 
                 { savedProperty.map((property, index) => {
