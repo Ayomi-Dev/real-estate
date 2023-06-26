@@ -95,9 +95,9 @@
         transition: right .2s;
         right: -520px;
     }
-    .menus li{
-        margin: 20px 0;
-    }
+    /* .menus li{
+        margin: 10px 0;
+    } */
     .menus li a{
         color: blueviolet;
     }
