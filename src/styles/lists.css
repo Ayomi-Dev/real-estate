@@ -119,7 +119,7 @@
         margin-bottom: 5px;
     }
     .all-properties{
-        margin-top: 50px;
+        margin-top: 30px;
     }
     .result{
         margin-top: 80px;
@@ -133,7 +133,10 @@
         height: 200px;
     }
     .all-properties{
-        margin-top: 100px ;
+        margin-top: 70px ;
+    }
+    .result{
+        margin-top: 100px;
     }
     .drop-down{
         width: 95%;
