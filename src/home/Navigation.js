@@ -27,24 +27,27 @@ const Navigation = () => {
             <div className="nav-menu">
 
                 <div className="logo">
-                    <Link>LOGO</Link>
+                    <Link to={'/'}>
+                        <i className='fa fa-landmark'></i>
+                        <p>De Realtor</p>
+                    </Link>
                 </div>
 
                 <ul className={`menus ${openMenu ? 'open' : ''}`}>
 
-                   <li className={activeMenu('/')}>
+                   <li className={activeMenu('/')} onClick={handleToggleMenu}>
                         <Link to='/'>Home</Link>
                     </li> 
 
-                   <li className={activeMenu('/about')}>
+                   <li className={activeMenu('/about')} onClick={handleToggleMenu}>
                         <Link to='/about'>About Us</Link>
                     </li> 
 
-                   <li className={activeMenu('/properties')}>
+                   <li className={activeMenu('/properties')} onClick={handleToggleMenu}>
                         <Link to='/properties'>Lists</Link>
                     </li>
 
-                   <li className={activeMenu('/contact')}> 
+                   <li className={activeMenu('/contact')} onClick={handleToggleMenu}> 
                         <Link to='/contact'>Contact</Link>
                     </li> 
                 </ul>

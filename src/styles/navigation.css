@@ -20,6 +20,9 @@
 .logo a{
     font-weight: 800;
     font-size: 1.5rem;
+    display: block;
+    font-style: italic;
+    text-align: center;
 }
 .menus{
     display: flex;
@@ -56,7 +59,7 @@
     top: -20px;
     left: 10px;
     color: #fff;
-    font-size: .5rem;
+    font-size: .7rem;
 }
 .notify{
     width: 100px;
@@ -75,7 +78,7 @@
     }
     .mobile-menu{
         display: block;
-        padding: 10px;
+        padding: 7px 10px;
         border-radius: 5px;
         border: 1px solid blueviolet;
         background: blueviolet;
@@ -87,22 +90,24 @@
         width: 80%;
         height: 100vh;
         background: black;
-        text-align: center;
         top: 70px;
         z-index: 999;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         transition: right .2s;
         right: -520px;
     }
-    /* .menus li{
-        margin: 10px 0;
-    } */
+    .menus.open li{
+        margin: 50px 0;
+    }
     .menus li a{
         color: blueviolet;
     }
     .menus.open{
        right: 0;
-       justify-content: space-around;
+       justify-content: flex-start;
+    }
+    .logo a{
+        font-size: 1.2rem;
     }
 }

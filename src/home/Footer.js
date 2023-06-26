@@ -5,7 +5,10 @@ const Footer = () => {
         <div className="footer">
             <div className="footer-content">
                 <div className="footer-logo">
-                    <Link to='/home'>LOGO</Link>
+                    <Link to='/'>
+                        <i className="fa fa-landmark"></i>
+                        <p>Luxury Homes</p>
+                    </Link>
                 </div>
                 <div className="footer-links">
                     <ul>

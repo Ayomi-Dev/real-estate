@@ -1,6 +1,6 @@
 .newsletter{
     width: 80%;
-    margin: 20px auto;
+    margin: 30px auto;
     height: 300px;
     position: relative;
     border-radius: 10px;
@@ -31,7 +31,7 @@
     background: none;
     border: none;
     outline: none;
-    height: 50px;
+    height: 100%;
     padding: 10px;
     color: #FFF;
     margin: 0;
@@ -46,6 +46,7 @@
     }
     .news-email{
         width: 90%;
+        height: 35px;
     }
     .newsletter .overlay h1{
         font-size: 1.2rem;

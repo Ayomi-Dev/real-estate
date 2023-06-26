@@ -14,7 +14,7 @@
     white-space: nowrap;
     overflow-x: auto;
     scroll-behavior: smooth;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 .feature-property::-webkit-scrollbar{
     display: none;
