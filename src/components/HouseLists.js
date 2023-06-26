@@ -31,11 +31,13 @@ const PropertyLists = () => {
             
             </div>
 
-            {count && <p className="result" style={{textAlign: "center", opaity: ".7"}}>
+            {count && <p className="result" style={{textAlign: "center", opacity: ".7"}}>
                 ({properties.length}) result(s) found
                 </p>
             }
             
+            {/* {!isLoading && <p className="not-found">No Match Found</p>} */}
+
             {isLoading ? 
                 <Oval
                     height={80}
