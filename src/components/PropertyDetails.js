@@ -8,7 +8,7 @@ import Similar from './Similar';
 
 
 const PropertyDetails = () => {
-    const { handleSavedProperty, savedProperty } = React.useContext(HouseContext);
+    const { handleBookmarks, notify } = React.useContext(HouseContext);
     const { id } = useParams();
     
     
@@ -25,36 +25,7 @@ const PropertyDetails = () => {
 
     // handling property saved
 
-    const [notify, setNotify] = useState(false)
     
-    const handleBookmarks = () => {
-
-        const bookmarkedProperty = {
-            id: selectedProperty.id,
-            name: selectedProperty.name,
-            location: selectedProperty.location,
-            img: selectedProperty.img,
-            price: selectedProperty.price,
-            city: selectedProperty.city, 
-            rooms: selectedProperty.rooms
-        }
-        
-        const searchProperty = savedProperty.find(property => property.id === selectedProperty.id);
-        
-        if(searchProperty === undefined){
-            handleSavedProperty(bookmarkedProperty)
-           
-        }else{
-            console.log('already found')
-            setNotify(true);
-
-            setTimeout(() => {
-                setNotify(false);
-            }, 5000)
-            return;
-        } ;
-    
-    }
 
     return ( 
         <>
@@ -131,7 +102,7 @@ const PropertyDetails = () => {
 
                 <div className="cta">
                     <button key={selectedProperty.id}
-                        onClick={handleBookmarks}
+                        onClick={() => handleBookmarks(selectedProperty)}
                     >Save for later</button>
                     {notify && <p>You already saved this property.</p>}
                 </div>

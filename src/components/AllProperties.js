@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { HouseContext } from "../HouseContext";
 
 
 
 
 const AllProperties = ({ properties }) => {
+
+    const { handleBookmarks } = useContext(HouseContext)
     
     return ( 
            
@@ -18,7 +22,7 @@ const AllProperties = ({ properties }) => {
                                     <img src={property.img} alt="" />
             
                                     <div className="layer">
-                                        <i className="fa fa-heart"></i>
+                                        <i className="fa fa-heart" onClick={() => handleBookmarks(property)}></i>
                                         <Link to={`/details/${property.id}`} >
                                             Click to view details
                                         </Link>

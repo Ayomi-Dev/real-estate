@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { propertyInfo } from "../HouseInfo";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { HouseContext } from "../HouseContext";
 
 
 const Newest = () => {
-
+    const { handleBookmarks } = useContext(HouseContext)
     const newestProperties = propertyInfo.filter(property => property.category === 'new')
 
     const featureRef  = useRef();
@@ -48,7 +49,7 @@ const Newest = () => {
                                 <img src={property.img} alt="" />
 
                                 <div className="layer">
-                                    <i className="fa fa-heart"></i>
+                                    <i className="fa fa-heart" onClick={() => handleBookmarks(property)}></i>
                                     <Link to={`/details/${property.id}`} >
                                         Click to view details
                                     </Link>

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import { HouseContext } from "../HouseContext";
 import { Link } from 'react-router-dom';
@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom';
 const Bookmark = () => {
 
     const { savedProperty, handleDelete } = React.useContext(HouseContext)
-    
        
     return ( 
         <div className="bookmark">
-            <h1>Here are your <span styles={{color: "blueviolet"}}>saved</span> properties</h1>
+            <h1>Your luxuries are <span styles={{color: "blueviolet"}}>saved</span> here.</h1>
+               
             <div className="container">
 
                 { savedProperty.map((property, index) => {

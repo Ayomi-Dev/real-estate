@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { propertyInfo } from "../HouseInfo";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { HouseContext } from "../HouseContext";
 
 
 
 
 const Similar = () => {
-    
+    const { handleBookmarks } = useContext(HouseContext);
+
     const featuredProperties = propertyInfo.filter(property => property.category === 'similar')
 
     const featureRef  = useRef()
@@ -51,7 +53,7 @@ const Similar = () => {
                                 <img src={property.img} alt="" />
 
                                 <div className="layer">
-                                    <i className="fa fa-heart"></i>
+                                    <i className="fa fa-heart" onClick={() => handleBookmarks(property)}></i>
                                     <Link to={`/details/${property.id}`} >
                                         Click to view details
                                     </Link>

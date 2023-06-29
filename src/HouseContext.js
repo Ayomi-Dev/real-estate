@@ -142,18 +142,53 @@ const HouseProvider = ({ children }) => {
         }
     }, [])
 
-    const handleSavedProperty = (property) => {
-        setSavedProperty([...savedProperty, property]);
+    // const handleSavedProperty = (property) => {
+    //     setSavedProperty([...savedProperty, property]);
 
-        localStorage.setItem('property', JSON.stringify([...savedProperty, property]))
-    }
+    //     localStorage.setItem('property', JSON.stringify([...savedProperty, property]))
+    // }
 
+    //notification message when bookmark is empty and adding same propety twice
+    const [notify, setNotify] = useState(false);
+    
+    //deleting pproperty from saved list
     const handleDelete = (id) => {
         setSavedProperty(savedProperty.filter(property => property.id !== id))
 
         localStorage.setItem('property', JSON.stringify(savedProperty.filter(property => property.id !== id)))
     }
 
+    
+    const handleBookmarks = (selectedProperty) => {
+
+        const bookmarkedProperty = {
+            id: selectedProperty.id,
+            name: selectedProperty.name,
+            location: selectedProperty.location,
+            img: selectedProperty.img,
+            price: selectedProperty.price,
+            city: selectedProperty.city, 
+            rooms: selectedProperty.rooms
+        }
+        
+        const searchProperty = savedProperty.find(property => property.id === selectedProperty.id);
+        
+        if(searchProperty === undefined){
+            setSavedProperty([...savedProperty, bookmarkedProperty]);
+
+            localStorage.setItem('property', JSON.stringify([...savedProperty, bookmarkedProperty]))
+           
+        }else{
+            console.log('already found')
+            setNotify(true);
+
+            setTimeout(() => {
+                setNotify(false);
+            }, 5000)
+            return;
+        } ;
+    
+    }
 
     //filtering property individually
 
@@ -166,6 +201,10 @@ const HouseProvider = ({ children }) => {
     //     console.log( filteredProperties)
     //     return setProperties(filteredProperties);
     // }
+
+    // const handleFavorite = () => {
+    //     console.log('fav')
+    // }
     
     return (
         <HouseContext.Provider value={{
@@ -176,16 +215,17 @@ const HouseProvider = ({ children }) => {
             propertyType,
             city,
             setCity,
+            notify,
             propertyLocation,
             propertyPrice,
             setPropertyPrice,
             handleAllFilter,
-            handleSavedProperty,
+            // handleSavedProperty,
             savedProperty, 
             handleDelete,
             isLoading,
-            count
-            // handleSingleFilter
+            count,
+            handleBookmarks,
         }}>
             { children }
         </HouseContext.Provider>
