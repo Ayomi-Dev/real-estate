@@ -16,4 +16,10 @@
     .about h1{
         font-size: 1.2rem;
     }
+    .about{
+        width: 100%;
+    }
+    .about p{
+        margin: 10px 20px;;
+    }
 }

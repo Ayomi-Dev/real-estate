@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 
 import { propertyInfo } from "../HouseInfo";
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { HouseContext } from "../HouseContext";
 
 const Feature = () => {
-    const { handleBookmarks } = useContext(HouseContext)
+    const { handleBookmarks, handleDelete } = useContext(HouseContext)
     const featuredProperties = propertyInfo.filter(property => property.category === 'feature')
 
     const featureRef  = useRef()
+    const [isSaved, setIsSaved] = useState('');
+
 
     const handleScrollLeft = () => {
         featureRef.current.scrollBy({
@@ -43,6 +45,19 @@ const Feature = () => {
             <div className="feature-property" ref={ featureRef }>
                 
                 {featuredProperties.map((property, index) => {
+                    
+                    const toggleBookmark = (propertyId) => {
+                        if(isSaved === propertyId){
+                            handleDelete(propertyId)
+                            setIsSaved('')
+                        }
+                        else{
+                            handleBookmarks(property);
+                            setIsSaved(propertyId);
+                        }
+
+                    }
+
                     return (
                         <div className="property" key={index}>
 
@@ -50,10 +65,12 @@ const Feature = () => {
                                 <img src={property.img} alt="" />
 
                                 <div className="layer">
-                                    <i className="fa fa-heart" onClick={() => handleBookmarks(property)}></i>
+                                    <i className={`fa fa-heart ${isSaved === property.id ? 'active' : ''}`} onClick={() => toggleBookmark(property.id) }></i>
+
                                     <Link to={`/details/${property.id}`} >
                                         Click to view details
                                     </Link>
+                                    
                                 </div>
 
                             </div> 

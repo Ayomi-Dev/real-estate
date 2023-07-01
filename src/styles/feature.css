@@ -9,6 +9,12 @@
 .feature span{
     color: blueviolet;
 }
+.fa-heart{
+    color:#ffff;
+}
+.fa-heart.active{
+    color: blueviolet;
+}
 .feature-property{
     max-width: 90%;
     white-space: nowrap;
@@ -122,7 +128,7 @@
     margin: 0 auto;
 }
 .title .fa{
-    margin:0 5px;
+    margin:0 10px;
 }
 @media screen and (max-width: 600px) {
     .feature-property{

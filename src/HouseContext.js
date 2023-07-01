@@ -142,11 +142,7 @@ const HouseProvider = ({ children }) => {
         }
     }, [])
 
-    // const handleSavedProperty = (property) => {
-    //     setSavedProperty([...savedProperty, property]);
 
-    //     localStorage.setItem('property', JSON.stringify([...savedProperty, property]))
-    // }
 
     //notification message when bookmark is empty and adding same propety twice
     const [notify, setNotify] = useState(false);
@@ -179,9 +175,9 @@ const HouseProvider = ({ children }) => {
             localStorage.setItem('property', JSON.stringify([...savedProperty, bookmarkedProperty]))
            
         }else{
-            console.log('already found')
+            handleDelete(selectedProperty.id)
             setNotify(true);
-
+            console.log("already found")
             setTimeout(() => {
                 setNotify(false);
             }, 5000)
@@ -190,23 +186,10 @@ const HouseProvider = ({ children }) => {
     
     }
 
-    //filtering property individually
 
-    // const handleSingleFilter = () => {
-    //     const filteredProperties = properties.filter(property =>{
-    //        if(property.type === type){
-    //             return property
-    //        }
-    //     })
-    //     console.log( filteredProperties)
-    //     return setProperties(filteredProperties);
-    // }
-
-    // const handleFavorite = () => {
-    //     console.log('fav')
-    // }
     
     return (
+        
         <HouseContext.Provider value={{
             properties,
             setProperties,
@@ -220,7 +203,6 @@ const HouseProvider = ({ children }) => {
             propertyPrice,
             setPropertyPrice,
             handleAllFilter,
-            // handleSavedProperty,
             savedProperty, 
             handleDelete,
             isLoading,
