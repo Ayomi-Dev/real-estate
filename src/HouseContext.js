@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { propertyInfo } from './HouseInfo'
+import { propertyInfo } from './HouseInfo';
 
 export const HouseContext = React.createContext()
         
@@ -8,9 +8,9 @@ const HouseProvider = ({ children }) => {
     const [properties, setProperties] = useState(propertyInfo)
     
     const [propertyType, setPropertyType] = useState([]);
-    const [type, setType] = useState('Type (Any)')
+    const [type, setType] = useState('Type (Any)');
 
-    const [propertyLocation, setPropertyLocation] = useState([])
+    const [propertyLocation, setPropertyLocation] = useState([]);
     const [city, setCity] = useState('Location (Any)');
 
 
@@ -144,17 +144,17 @@ const HouseProvider = ({ children }) => {
 
 
 
-    //notification message when bookmark is empty and adding same propety twice
+    //notification message when bookmark is empty and adding same property twice
     const [notify, setNotify] = useState(false);
     
     //deleting pproperty from saved list
     const handleDelete = (id) => {
         setSavedProperty(savedProperty.filter(property => property.id !== id))
 
-        localStorage.setItem('property', JSON.stringify(savedProperty.filter(property => property.id !== id)))
+        localStorage.setItem('property', JSON.stringify(savedProperty.filter(property => property.id !== id)));
     }
 
-    
+    //adding selected property to bookmark section
     const handleBookmarks = (selectedProperty) => {
 
         const bookmarkedProperty = {
@@ -177,7 +177,7 @@ const HouseProvider = ({ children }) => {
         }else{
             handleDelete(selectedProperty.id)
             setNotify(true);
-            console.log("already found")
+
             setTimeout(() => {
                 setNotify(false);
             }, 5000)
@@ -189,7 +189,7 @@ const HouseProvider = ({ children }) => {
 
     
     return (
-        
+
         <HouseContext.Provider value={{
             properties,
             setProperties,

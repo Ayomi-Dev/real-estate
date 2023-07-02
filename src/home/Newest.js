@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { useContext, useRef, useState } from "react";
+import { Link } from "react-router-dom"
 import { propertyInfo } from "../HouseInfo";
-import { useContext, useRef } from "react";
 import { HouseContext } from "../HouseContext";
 
-
 const Newest = () => {
-    const { handleBookmarks } = useContext(HouseContext)
-    const newestProperties = propertyInfo.filter(property => property.category === 'new')
+    const { handleBookmarks, handleDelete } = useContext(HouseContext)
+    const featuredProperties = propertyInfo.filter(property => property.category === 'feature')
 
-    const featureRef  = useRef();
+    const featureRef  = useRef()
+    const [isSaved, setIsSaved] = useState('');
+
 
     const handleScrollLeft = () => {
         featureRef.current.scrollBy({
@@ -42,38 +43,63 @@ const Newest = () => {
 
             <div className="feature-property" ref={ featureRef }>
                 
-                {newestProperties.map((property, index) => {
+                {featuredProperties.map((property, index) => {
+                    
+                    const toggleBookmark = (propertyId) => {
+                        if(isSaved === propertyId){
+                            handleDelete(propertyId)
+                            setIsSaved('')
+                        }
+                        else{
+                            handleBookmarks(property);
+                            setIsSaved(propertyId);
+                        }
+
+                    }
+
                     return (
                         <div className="property" key={index}>
+
                             <div className="property-img">
                                 <img src={property.img} alt="" />
 
                                 <div className="layer">
-                                    <i className="fa fa-heart" onClick={() => handleBookmarks(property)}></i>
+                                    <i className={`fa fa-heart ${isSaved === property.id ? 'active' : ''}`} onClick={() => toggleBookmark(property.id) }></i>
+
                                     <Link to={`/details/${property.id}`} >
                                         Click to view details
                                     </Link>
+                                    
                                 </div>
 
-                            </div>
+                            </div> 
+
                             <div className="property-details">
+
                                 <div className="name-price">
                                     <h3>{property.name}</h3>
                                     <h3>${property.price}</h3>
                                 </div>
+
                                 <div className="location-section">
                                     <p><i className="fa fa-location-dot"></i> {property.location}, {property.city}</p>
                                     <div className="interior">
+
                                         <i className="fa fa-bed"></i><span>{property.beds}</span>
                                         <i className="fa fa-bath"></i><span>{property.baths}</span>
                                         <i className="fa fa-kitchen-set"></i><span>{property.kitchen}</span>
+ 
                                     </div>
+
                                 </div>
+
+
                                 <div className="cta">
                                     <Link to={`/details/${property.id}`}>
                                         <button>Book Now</button>
                                     </Link>
                                 </div>
+                                
                             </div>
                         </div>
                     )

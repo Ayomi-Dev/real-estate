@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-
-import { propertyInfo } from "../HouseInfo";
 import { useContext, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { propertyInfo } from "../HouseInfo";
 import { HouseContext } from "../HouseContext";
 
 const Feature = () => {
@@ -13,7 +12,7 @@ const Feature = () => {
 
 
     const handleScrollLeft = () => {
-        featureRef.current.scrollBy({
+        featureRef.current.scrollBy({ 
             left: -150, 
             behavior: 'smooth',
         })

@@ -1,17 +1,15 @@
+import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { propertyInfo } from "../HouseInfo";
-import { useContext, useRef } from "react";
 import { HouseContext } from "../HouseContext";
 
-
-
-
 const Similar = () => {
-    const { handleBookmarks } = useContext(HouseContext);
-
-    const featuredProperties = propertyInfo.filter(property => property.category === 'similar')
+    const { handleBookmarks, handleDelete } = useContext(HouseContext)
+    const featuredProperties = propertyInfo.filter(property => property.category === 'feature')
 
     const featureRef  = useRef()
+    const [isSaved, setIsSaved] = useState('');
+
 
     const handleScrollLeft = () => {
         featureRef.current.scrollBy({
@@ -29,7 +27,7 @@ const Similar = () => {
     return ( 
         <div className="feature">
             <div className="title">
-            <h1><span>Similar</span> Properties</h1>
+                <h1><span>Similar</span> Properties</h1>
                 <h1>
                     <i className="fa fa-arrow-left-long" onClick={ handleScrollLeft }></i>
 
@@ -46,6 +44,19 @@ const Similar = () => {
             <div className="feature-property" ref={ featureRef }>
                 
                 {featuredProperties.map((property, index) => {
+                    
+                    const toggleBookmark = (propertyId) => {
+                        if(isSaved === propertyId){
+                            handleDelete(propertyId)
+                            setIsSaved('')
+                        }
+                        else{
+                            handleBookmarks(property);
+                            setIsSaved(propertyId);
+                        }
+
+                    }
+
                     return (
                         <div className="property" key={index}>
 
@@ -53,10 +64,12 @@ const Similar = () => {
                                 <img src={property.img} alt="" />
 
                                 <div className="layer">
-                                    <i className="fa fa-heart" onClick={() => handleBookmarks(property)}></i>
+                                    <i className={`fa fa-heart ${isSaved === property.id ? 'active' : ''}`} onClick={() => toggleBookmark(property.id) }></i>
+
                                     <Link to={`/details/${property.id}`} >
                                         Click to view details
                                     </Link>
+                                    
                                 </div>
 
                             </div> 
@@ -75,7 +88,7 @@ const Similar = () => {
                                         <i className="fa fa-bed"></i><span>{property.beds}</span>
                                         <i className="fa fa-bath"></i><span>{property.baths}</span>
                                         <i className="fa fa-kitchen-set"></i><span>{property.kitchen}</span>
-
+ 
                                     </div>
 
                                 </div>
