@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { HouseContext } from "../HouseContext";
 
@@ -7,13 +7,26 @@ import { HouseContext } from "../HouseContext";
 
 const AllProperties = ({ properties }) => {
 
-    const { handleBookmarks } = useContext(HouseContext)
+    const { handleBookmarks, handleDelete } = useContext(HouseContext)
+
+    const [isSaved, setIsSaved] = useState('');
     
     return ( 
            
         <div className="all-properties">
         
             {properties.map((property, index) => {
+
+                const toggleBookmarks = (propertyId) => {
+                    if(isSaved === propertyId){
+                        handleDelete(propertyId)
+                        setIsSaved('')
+                    }
+                    else{
+                        handleBookmarks(property);
+                        setIsSaved(propertyId);
+                    }
+                }
 
                     return(   
 
@@ -22,7 +35,7 @@ const AllProperties = ({ properties }) => {
                                     <img src={property.img} alt="" />
             
                                     <div className="layer">
-                                        <i className="fa fa-heart" onClick={() => handleBookmarks(property)}></i>
+                                        <i className={`fa fa-heart ${isSaved === property.id ? 'active' : ''}`} onClick={() => toggleBookmarks(property.id) }></i>
                                         <Link to={`/details/${property.id}`} >
                                             Click to view details
                                         </Link>

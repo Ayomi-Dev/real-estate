@@ -10,7 +10,7 @@ const Bookmark = () => {
        
     return ( 
         <div className="bookmark">
-            <h1>Your luxuries are <span styles={{color: "blueviolet"}}>saved</span> here.</h1>
+            <h1>Your luxuries are <span style={{color: "blueviolet"}}>saved</span> here.</h1>
                
             <div className="container">
 
@@ -25,7 +25,7 @@ const Bookmark = () => {
                                         </div>
 
                                         <div className="price-location">
-                                            <h2>${ property.price} </h2>
+                                            <h2 style={{color: "blueviolet"}}> ${ property.price} </h2>
                                             <h2>{property.location}, {property.city}</h2>
                                         </div>
                                     </div>

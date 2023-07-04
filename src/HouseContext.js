@@ -66,7 +66,7 @@ const HouseProvider = ({ children }) => {
                 return property;
             }
 
-            // if all filter includes any option
+            // if all filter includes (All) option
             if(isAny(city) && isAny(type) && isAny(propertyPrice)){
                 
                 return property
@@ -175,7 +175,6 @@ const HouseProvider = ({ children }) => {
             localStorage.setItem('property', JSON.stringify([...savedProperty, bookmarkedProperty]))
            
         }else{
-            handleDelete(selectedProperty.id)
             setNotify(true);
 
             setTimeout(() => {
@@ -209,7 +208,10 @@ const HouseProvider = ({ children }) => {
             count,
             handleBookmarks,
         }}>
+
             { children }
+
+
         </HouseContext.Provider>
      );
 }

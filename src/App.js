@@ -32,7 +32,7 @@ import Footer from './home/Footer';
 function App() {
   
   return (
-    <Router>
+    // <Router>
       <>
         
         <HouseProvider>
@@ -60,7 +60,7 @@ function App() {
         </HouseProvider>
           
       </>
-    </Router>
+    // </Router>
     
   );
 }
