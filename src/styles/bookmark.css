@@ -5,6 +5,7 @@
 .bookmark h1{
     text-align: center;
     margin: 10px 15px;
+    font-size: 1.2rem;
 }
 .container{
     width: 60%;
@@ -23,13 +24,14 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,.5);
+    box-shadow: 0px 2px 3px rgba(0,0,0,.4);
     padding: 15px;
     border-radius: 8px;
 }
 .img-name{
     width: 70%;
     height: 100%;
+    font-size: .8rem;
 }
 .img-name img{
     width: 100%;
@@ -40,6 +42,7 @@
 }
 .price-location{
     width: 30%;
+    font-size: .8rem
 }
 .price-location h2{
     margin: 10px 0 0 10px;
@@ -68,7 +71,7 @@
     .saved-property{
         height: 200px;
     }
-    .price-location h2{
-        font-size: .8rem;
+    .price-location, .img-name{
+        font-size: .7rem
     }
 }

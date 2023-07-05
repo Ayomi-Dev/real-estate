@@ -82,29 +82,29 @@
 .agent-section{
     width: 30%;
 }
-form{
+.agent{
     width: 100%;
     margin-top: 20px;
     padding: 20px 15px;
     border-radius: 5px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
 }
-form input{
+.agent input{
     border: 1px solid rgba(0, 0, 0, .3);
     width: 100%;
     height: 40px;
     display: block;
     margin-bottom: 10px;
-    outline: none;
+    outline: none; 
     padding: 10px;
     border-radius: 5px;
 }
-form label{
+.agent label{
     text-align: left;
     display: block;
     margin-bottom: 10px;
 }
-form textarea{
+.agent textarea{
     border: 1px solid rgba(0, 0, 0, .3);
     border-radius: 5px;
     padding: 10px;
@@ -133,7 +133,7 @@ form textarea{
     margin-right: 15px;
     
 }
-form input:focus, form textarea:focus{
+.agent input:focus, .agent textarea:focus{
     border: 1px solid blueviolet;
 }
 
@@ -162,7 +162,7 @@ form input:focus, form textarea:focus{
     .name-price h2{
         font-size: .8rem; 
     }
-    form{
+    .agent{
         text-align: center;
         width: 97%;
         margin-left: auto;

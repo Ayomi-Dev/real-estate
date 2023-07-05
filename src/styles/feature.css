@@ -16,18 +16,19 @@
     color: blueviolet;
 }
 .feature-property{
-    max-width: 90%;
+    max-width: 95%;
     white-space: nowrap;
     overflow-x: auto;
     scroll-behavior: smooth;
     margin: 20px 0;
+    padding: 10px 0;
 }
 .feature-property::-webkit-scrollbar{
     display: none;
 }
 .property{
     display: inline-block;
-    width: 300px;
+    width: 250px;
     height: 430px;
     position: relative;
     transition: box-shadow .2s;
@@ -42,7 +43,7 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     transition: transform .2s;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
 .property-img img{
     width: 100%;
@@ -73,7 +74,6 @@
 .location-section{
     font-size: .8rem;
 }
-
 .layer{
     width: 100%;
     color: #fff;
@@ -85,25 +85,25 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: height .2s;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .layer a{
     background: #fff;
     color: blueviolet;
-    padding: 10px 15px;
+    padding: 6px 15px;
     border-radius: 5px;
     position: absolute;
     top: 10px;
     left: 10px;
     font-weight: 600;
+    font-size: .8em;
 }
 .layer .fa{
     position: absolute;
     right: 10px;
-    top: 20px;
-    font-size: 1.2rem;
+    top: 15px;
+    font-size: 1rem;
 }
 .interior{
     display: flex;
@@ -111,15 +111,19 @@
 }
 .interior .fa{
     margin: 0 5px;
+    font-size: .8em;
 }
 .cta{
     text-align: center;
 }
+.feature button{
+    padding: 7px 10px;
+}
 .property:hover{
-    box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
 .property:hover .property-img{
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 .title{
     display: flex;
@@ -145,8 +149,7 @@
         height: 200px;
     }
     .feature .name-price, .feature .location-section{
-        flex-direction: column;
-        
+        flex-direction: column; 
     }
     .feature .location-section p{
         text-align: center;

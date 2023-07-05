@@ -42,7 +42,7 @@ const Navigation = () => {
                    <li className={activeMenu('/about')} onClick={handleToggleMenu}>
                         <Link to='/about'>About Us</Link>
                     </li> 
-
+ 
                    <li className={activeMenu('/properties')} onClick={handleToggleMenu}>
                         <Link to='/properties'>Lists</Link>
                     </li>

@@ -27,7 +27,7 @@ const Similar = () => {
     return ( 
         <div className="feature">
             <div className="title">
-                <h1><span>Similar</span> Properties</h1>
+                <h1>You might also <span>like</span> </h1>
                 <h1>
                     <i className="fa fa-arrow-left-long" onClick={ handleScrollLeft }></i>
 

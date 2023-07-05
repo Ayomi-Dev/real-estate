@@ -118,7 +118,7 @@ const PropertyDetails = () => {
                     <img src={selectedProperty.img} alt="" /> <br />
                     <span>Dev. Ayo</span>
                 </div>
-                <form action="">
+                <form className="agent" action="">
                     
                     <label htmlFor="">Add Phone number</label>
                     <input type="tel" 

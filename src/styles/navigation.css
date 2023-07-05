@@ -34,16 +34,17 @@
     margin: 0 15px; 
 }
 .menus li.active{
-    background: blueviolet;
-    color: #fff;
+    color: blueviolet;
+    /* color: #fff; */
     padding: 8px 12px;
     border-radius: 5px;
 }
 .menus li a{
-    color: blueviolet;
+    color: black;
 }
 .menus li.active a{
-    color: #fff;
+    color: blueviolet;
+    font-weight: bolder;
 }
 .counter{
     position: relative;
@@ -101,7 +102,7 @@
         margin: 50px 0;
     }
     .menus li a{
-        color: blueviolet;
+        color: #fff;
     }
     .menus.open{
        right: 0;

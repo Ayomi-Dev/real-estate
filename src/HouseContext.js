@@ -66,13 +66,13 @@ const HouseProvider = ({ children }) => {
                 return property;
             }
 
-            // if all filter includes (All) option
+            // if all filter options includes (All) option
             if(isAny(city) && isAny(type) && isAny(propertyPrice)){
                 
                 return property
             }
 
-            // if all filter includes (All) but not type
+            // if all filter options includes (All) but not type
             if(!isAny(type) && isAny(city) && isAny(propertyPrice)) {
                 return property.type === type
             }
