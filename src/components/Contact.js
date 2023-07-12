@@ -43,7 +43,7 @@ const Contact = () => {
                     
                 </div>
                 <div className="phone">
-                    <form action="">
+                    <form className='agent' action="">
                         <label htmlFor="">Name</label>
                         <input type="text" />
 
