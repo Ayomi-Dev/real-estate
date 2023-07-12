@@ -16,10 +16,13 @@ const Navigation = () => {
         return location.pathname === path ? 'active' : '';
     }
 
-
+    
     //toggle mobile menu on smaller screens
     const handleToggleMenu = () => {
         setOpenMenu(!openMenu)
+        window.scrollTo({
+            top: 0,
+        })
     }
 
     return ( 
